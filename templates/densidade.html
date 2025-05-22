@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Densidade</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+        .calculo1 {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+            color: black;
+            display: block;
+            text-decoration:none ;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <a href="/">Home</a>
+        <a href="#">Sobre</a>
+        <a href="/formulas">Formulas</a>
+        <a href="#">Contato</a>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <h1>Formula densidade</h1>
+        <p>Use 0 para oque deseja calcular</p>
+    </div>
+ <!--
+    o <br> é para quebrar linha, ou seja ele vai quebrar a linha entre os inputs fazendo com que fique
+    um abaixo do outro
+ -->
+    <form class=calculo1 action="/calculo_densidade" method="post">
+        <label for="massa">Massa (kg):</label>
+        <input type="number" name="massa" step="any" required>
+        <br><br>
+        <label for="volume">Volume (m³):</label>
+        <input type="number" name="volume" step="any" required>
+        <br><br>
+        <label for="densidade">Densidade (kg/m³)</label>
+        <input type="number" name="densidade" step="any" required>
+        <p>{{batata}}</p>
+        <button>Calcular</button>
+    </form>
+   
+</body>
+</html>

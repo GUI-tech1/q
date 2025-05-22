@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilatação linear</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+        .calculo1 {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+            color: black;
+            display: block;
+            text-decoration:none ;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <a href="/">Home</a>
+        <a href="#">Sobre</a>
+        <a href="/formulas">Formulas</a>
+        <a href="#">Contato</a>
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <h1>Formula da dilatação linear</h1>
+        <p>Use 0 para oque deseja calcular</p>
+    </div>
+ 
+    <form class=calculo1 action="/calculo_dilataçaolinear" method="post">
+        <label for="coeficientedilataçaolinear">Coeficiente de Dilatação Linear:</label>
+        <input type="number" name="coeficientedilataçaolinear" step="any" required>
+        <br><br>
+        <label for="vtemperatura">Variação de temperatura (°C):</label>
+        <input type="number" name="vtemperatura" step="any" required>
+        <br><br>
+        <label for="icomprimento">Comprimento inicial (m)</label>
+        <input type="number" name="icomprimento" step="any" required>
+        <br><br>
+        <label for="vcomprimento">Variação do comprimento (m)</label>
+        <input type="number" name="vcomprimento" step="any" required>
+        <p>{{placa}}</p>
+        <button>Calcular</button>
+    </form>
+   
+</body>
+</html>

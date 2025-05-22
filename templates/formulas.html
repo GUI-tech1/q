@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+        .main-content input {
+            padding: 3px;
+            font-size: 15px;
+            width: 20%;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .formulas {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+            color: black;
+            display: block;
+            text-decoration:none ;
+        }
+        .formulas a {
+            text-decoration:none;
+            margin-right: 13px;
+            margin-bottom:13px ;
+            color: white;
+            display: inline-block;  
+            padding: 8px;
+            font-size: 15px;
+            background-color: #333;
+            border:none;
+            border-radius: 15px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- dentro do href está a forma como eu indentifiquei a rota no flask EX:
+     <a href="/">Home</a> Esta com um "/" no href pq a rota do python é "/" e eu quero que quando clicar
+     na aba home ele me leve para a rota "/"
+    
+    
+    --> 
+    <div class="sidebar" id="sidebar">
+        <a href="/">Home</a>
+        <a href="#">Sobre</a>
+        <a href="/formulas" >Formulas</a>
+        <a href="#">Contato</a>
+    </div>
+    <div class="main-content" id="mainContent">
+        <h1>FORMULAS</h1>
+        <input type="text" id="search" placeholder="Pesquisar...">
+    </div>
+    <div class="formulas" id="densidade">
+        <a href="/densidade">Densidade</a>
+        <a href="/dilataçaolinear">Dilatação linear</a>
+        <a href="/bhaskara">Bhaskara</a>
+        <a href="/2leinewton">2° Lei de Newton</a>
+        
+
+
+</body>
+</html>
